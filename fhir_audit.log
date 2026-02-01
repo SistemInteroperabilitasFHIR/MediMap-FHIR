@@ -1,0 +1,251 @@
+2026-01-31 23:39:18,077 - WARNING -  * Debugger is active!
+2026-01-31 23:39:18,080 - INFO -  * Debugger PIN: 547-725-284
+2026-01-31 23:39:18,451 - WARNING -  * Debugger is active!
+2026-01-31 23:39:18,458 - INFO -  * Debugger PIN: 547-725-284
+2026-01-31 23:39:33,238 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-01-31 23:39:33,588 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-01-31 23:39:33,967 - WARNING -  * Debugger is active!
+2026-01-31 23:39:33,970 - INFO -  * Debugger PIN: 547-725-284
+2026-01-31 23:39:34,367 - WARNING -  * Debugger is active!
+2026-01-31 23:39:34,370 - INFO -  * Debugger PIN: 547-725-284
+2026-01-31 23:44:43,264 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-31 23:44:43,264 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 23:44:43,265 - INFO -  * Restarting with stat
+2026-01-31 23:44:43,721 - WARNING -  * Debugger is active!
+2026-01-31 23:44:43,723 - INFO -  * Debugger PIN: 547-725-284
+2026-01-31 23:45:06,777 - INFO - 127.0.0.1 - - [31/Jan/2026 23:45:06] "GET / HTTP/1.1" 200 -
+2026-01-31 23:50:02,710 - INFO - Mapped patient: 123
+2026-01-31 23:50:02,710 - ERROR - Error in process: This resource already has an id, cannot create
+2026-01-31 23:55:57,852 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-01-31 23:55:58,286 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-01-31 23:55:58,560 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-01-31 23:55:58,674 - INFO -  * Restarting with stat
+2026-01-31 23:57:41,932 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-31 23:57:41,934 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 23:57:41,936 - INFO -  * Restarting with stat
+2026-01-31 23:57:42,365 - WARNING -  * Debugger is active!
+2026-01-31 23:57:42,367 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:04:29,058 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:04:29,058 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:04:29,060 - INFO -  * Restarting with stat
+2026-02-01 00:04:29,491 - WARNING -  * Debugger is active!
+2026-02-01 00:04:29,493 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:09:50,420 - INFO - 127.0.0.1 - - [01/Feb/2026 00:09:50] "GET / HTTP/1.1" 200 -
+2026-02-01 00:11:34,521 - INFO - Proses data pasien 123 selesai.
+2026-02-01 00:11:34,522 - INFO - 127.0.0.1 - - [01/Feb/2026 00:11:34] "POST /upload HTTP/1.1" 200 -
+2026-02-01 00:13:41,663 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:13:41,722 - INFO -  * Detected change in 'c:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:13:41,785 - INFO -  * Restarting with stat
+2026-02-01 00:13:41,875 - INFO -  * Restarting with stat
+2026-02-01 00:15:39,692 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:15:39,692 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:15:39,695 - INFO -  * Restarting with stat
+2026-02-01 00:15:40,616 - WARNING -  * Debugger is active!
+2026-02-01 00:15:40,618 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:15:41,632 - INFO -  * Detected change in 'c:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:15:41,715 - INFO -  * Restarting with stat
+2026-02-01 00:15:42,353 - WARNING -  * Debugger is active!
+2026-02-01 00:15:42,356 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:16:18,111 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:16:18,111 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:16:18,112 - INFO -  * Restarting with stat
+2026-02-01 00:16:18,667 - WARNING -  * Debugger is active!
+2026-02-01 00:16:18,669 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:16:32,287 - INFO - 127.0.0.1 - - [01/Feb/2026 00:16:32] "GET / HTTP/1.1" 200 -
+2026-02-01 00:17:10,254 - INFO - Proses data pasien 123 selesai.
+2026-02-01 00:17:10,255 - INFO - 127.0.0.1 - - [01/Feb/2026 00:17:10] "POST /upload HTTP/1.1" 200 -
+2026-02-01 00:21:29,936 - INFO -  * Detected change in 'c:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:21:30,055 - INFO -  * Restarting with stat
+2026-02-01 00:21:30,102 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:21:30,273 - INFO -  * Restarting with stat
+2026-02-01 00:24:03,544 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:24:03,544 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:24:03,546 - INFO -  * Restarting with stat
+2026-02-01 00:24:03,992 - WARNING -  * Debugger is active!
+2026-02-01 00:24:03,994 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:25:23,283 - INFO - 127.0.0.1 - - [01/Feb/2026 00:25:23] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-01 00:30:40,403 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:30:40,403 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:30:40,408 - INFO -  * Restarting with stat
+2026-02-01 00:30:41,616 - WARNING -  * Debugger is active!
+2026-02-01 00:30:41,619 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:32:26,737 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:32:26,738 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:32:26,742 - INFO -  * Restarting with stat
+2026-02-01 00:32:27,574 - WARNING -  * Debugger is active!
+2026-02-01 00:32:27,576 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:38:41,090 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:38:41,235 - INFO -  * Restarting with stat
+2026-02-01 00:38:41,506 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:38:41,526 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 00:38:41,730 - INFO -  * Restarting with stat
+2026-02-01 00:38:41,803 - INFO -  * Restarting with stat
+2026-02-01 00:38:42,376 - WARNING -  * Debugger is active!
+2026-02-01 00:38:42,380 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:38:43,018 - WARNING -  * Debugger is active!
+2026-02-01 00:38:43,023 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:38:43,270 - WARNING -  * Debugger is active!
+2026-02-01 00:38:43,276 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:38:45,107 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:38:45,108 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:38:45,112 - INFO -  * Restarting with stat
+2026-02-01 00:38:47,180 - WARNING -  * Debugger is active!
+2026-02-01 00:38:47,183 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:40:13,051 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:40:13,054 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:40:13,057 - INFO -  * Restarting with stat
+2026-02-01 00:40:13,653 - WARNING -  * Debugger is active!
+2026-02-01 00:40:13,655 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 00:48:19,072 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 00:48:19,073 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 00:48:19,078 - INFO -  * Restarting with stat
+2026-02-01 00:48:19,743 - WARNING -  * Debugger is active!
+2026-02-01 00:48:19,746 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 02:29:43,468 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 02:29:43,469 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 02:29:43,476 - INFO -  * Restarting with stat
+2026-02-01 02:29:44,748 - WARNING -  * Debugger is active!
+2026-02-01 02:29:44,754 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 02:33:32,830 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 02:33:32,831 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 02:33:32,842 - INFO -  * Restarting with stat
+2026-02-01 02:33:36,845 - WARNING -  * Debugger is active!
+2026-02-01 02:33:36,851 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 02:36:53,960 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 02:36:53,961 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 02:36:53,964 - INFO -  * Restarting with stat
+2026-02-01 02:36:55,562 - WARNING -  * Debugger is active!
+2026-02-01 02:36:55,565 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 02:38:01,208 - INFO - 127.0.0.1 - - [01/Feb/2026 02:38:01] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-01 02:38:01,640 - INFO - 127.0.0.1 - - [01/Feb/2026 02:38:01] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-01 02:41:08,415 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 02:41:08,419 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 02:41:08,423 - INFO -  * Restarting with stat
+2026-02-01 02:41:10,123 - WARNING -  * Debugger is active!
+2026-02-01 02:41:10,126 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 02:44:32,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 02:44:32,696 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 02:44:32,698 - INFO -  * Restarting with stat
+2026-02-01 02:44:33,517 - WARNING -  * Debugger is active!
+2026-02-01 02:44:33,522 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:11,164 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:11,180 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:11,209 - INFO -  * Detected change in 'c:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:11,286 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:11,305 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:11,314 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:11,720 - INFO -  * Restarting with stat
+2026-02-01 04:44:11,737 - INFO -  * Restarting with stat
+2026-02-01 04:44:11,727 - INFO -  * Restarting with stat
+2026-02-01 04:44:11,743 - INFO -  * Restarting with stat
+2026-02-01 04:44:11,906 - INFO -  * Restarting with stat
+2026-02-01 04:44:11,974 - INFO -  * Restarting with stat
+2026-02-01 04:44:12,050 - INFO -  * Restarting with stat
+2026-02-01 04:44:12,074 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:12,080 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:12,147 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:12,167 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\fhir_service.py', reloading
+2026-02-01 04:44:12,965 - INFO -  * Restarting with stat
+2026-02-01 04:44:13,048 - INFO -  * Restarting with stat
+2026-02-01 04:44:13,051 - INFO -  * Restarting with stat
+2026-02-01 04:44:13,163 - INFO -  * Restarting with stat
+2026-02-01 04:44:14,370 - WARNING -  * Debugger is active!
+2026-02-01 04:44:14,378 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:14,938 - WARNING -  * Debugger is active!
+2026-02-01 04:44:14,942 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:15,204 - WARNING -  * Debugger is active!
+2026-02-01 04:44:15,207 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:15,581 - WARNING -  * Debugger is active!
+2026-02-01 04:44:15,584 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:15,750 - WARNING -  * Debugger is active!
+2026-02-01 04:44:15,753 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:15,767 - WARNING -  * Debugger is active!
+2026-02-01 04:44:15,770 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:15,889 - WARNING -  * Debugger is active!
+2026-02-01 04:44:15,894 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:16,076 - WARNING -  * Debugger is active!
+2026-02-01 04:44:16,079 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:16,082 - WARNING -  * Debugger is active!
+2026-02-01 04:44:16,084 - WARNING -  * Debugger is active!
+2026-02-01 04:44:16,085 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:16,086 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:16,105 - WARNING -  * Debugger is active!
+2026-02-01 04:44:16,109 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:16,523 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:16,602 - INFO -  * Restarting with stat
+2026-02-01 04:44:16,643 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:16,772 - INFO -  * Restarting with stat
+2026-02-01 04:44:16,917 - INFO -  * Detected change in 'c:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:16,950 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:16,961 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,113 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,137 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,165 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,177 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,185 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,333 - INFO -  * Detected change in 'C:\\Users\\safir\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\fhir-web\\app.py', reloading
+2026-02-01 04:44:17,443 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,684 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,689 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,696 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,716 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,732 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,745 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,752 - INFO -  * Restarting with stat
+2026-02-01 04:44:17,761 - INFO -  * Restarting with stat
+2026-02-01 04:44:19,612 - WARNING -  * Debugger is active!
+2026-02-01 04:44:19,614 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:20,977 - WARNING -  * Debugger is active!
+2026-02-01 04:44:20,980 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,159 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,162 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,191 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,194 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,269 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,273 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,403 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,406 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,644 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,647 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,654 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,657 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,708 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,711 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:21,953 - WARNING -  * Debugger is active!
+2026-02-01 04:44:21,957 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:44:22,085 - WARNING -  * Debugger is active!
+2026-02-01 04:44:22,088 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 04:50:26,210 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 04:50:26,211 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 04:50:26,213 - INFO -  * Restarting with stat
+2026-02-01 04:50:27,262 - WARNING -  * Debugger is active!
+2026-02-01 04:50:27,268 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 05:32:44,379 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 05:32:44,381 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 05:32:44,384 - INFO -  * Restarting with stat
+2026-02-01 05:32:45,565 - WARNING -  * Debugger is active!
+2026-02-01 05:32:45,572 - INFO -  * Debugger PIN: 547-725-284
+2026-02-01 05:35:56,507 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-01 05:35:56,508 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 05:35:56,512 - INFO -  * Restarting with stat
+2026-02-01 05:35:57,212 - WARNING -  * Debugger is active!
+2026-02-01 05:35:57,215 - INFO -  * Debugger PIN: 105-813-235

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMap FHIR - Semantic Integrator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .custom-scroll::-webkit-scrollbar { width: 5px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 10px; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .bg-medical { background-color: #f8fafc; }
+        #mappingTable th { border-bottom: 2px solid #e2e8f0; background: #f1f5f9; text-align: left; padding: 12px; }
+        #mappingTable td { padding: 12px; border-bottom: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="bg-medical font-sans">
+
+    <div id="login-page" class="min-h-screen flex items-center justify-center bg-slate-900">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-96 border-t-4 border-indigo-600">
+            <div class="text-center mb-6">
+                <i class="fas fa-file-medical-alt text-4xl text-indigo-600 mb-2"></i>
+                <h1 class="text-xl font-bold">FHIR Mapping System</h1>
+                <p class="text-gray-500 text-sm">Standardized Medical Record Mapping</p>
+            </div>
+            <div class="space-y-4">
+                <input type="text" id="user" class="w-full px-4 py-2 border rounded-lg focus:outline-indigo-500" placeholder="Username (user)">
+                <input type="password" id="pass" class="w-full px-4 py-2 border rounded-lg focus:outline-indigo-500" placeholder="Password (321)">
+                <button onclick="login()" class="w-full bg-indigo-600 text-white py-2 rounded-lg font-bold hover:bg-indigo-700 transition">Login System</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden min-h-screen flex flex-col md:flex-row">
+        <aside class="w-full md:w-64 bg-slate-800 text-white flex flex-col">
+            <div class="p-6 font-bold text-xl border-b border-slate-700">
+                <i class="fas fa-network-wired mr-2"></i>FHIR Mapper
+            </div>
+            <nav class="flex-1 p-4 space-y-2">
+                <button onclick="showTab('tab-search')" class="w-full text-left p-3 hover:bg-indigo-600 rounded transition flex items-center bg-indigo-500/20"><i class="fas fa-search w-8"></i> Search & Map</button>
+                <button onclick="showTab('tab-patient')" class="w-full text-left p-3 hover:bg-slate-700 rounded transition flex items-center"><i class="fas fa-user-circle w-8"></i> Patient Data</button>
+                <button onclick="showTab('tab-obs')" class="w-full text-left p-3 hover:bg-slate-700 rounded transition flex items-center"><i class="fas fa-microscope w-8"></i> Observation (LOINC)</button>
+                <button onclick="showTab('tab-snomed')" class="w-full text-left p-3 hover:bg-slate-700 rounded transition flex items-center"><i class="fas fa-stethoscope w-8"></i> Condition (SNOMED)</button>
+                <button onclick="showTab('tab-icd')" class="w-full text-left p-3 hover:bg-slate-700 rounded transition flex items-center"><i class="fas fa-notes-medical w-8"></i> Diagnosis (ICD-10)</button>
+                <hr class="border-slate-700 my-4">
+                <button onclick="location.reload()" class="w-full text-left p-3 text-red-400 hover:bg-slate-700 rounded transition flex items-center"><i class="fas fa-sign-out-alt w-8"></i> Logout</button>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-10 overflow-y-auto h-screen custom-scroll">
+            <div class="max-w-6xl mx-auto">
+                
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 mb-8">
+                    <h2 class="font-bold text-indigo-800">Interoperabilitas Pemetaan Data Terstandar</h2>
+                    <p class="text-sm text-indigo-600">Integrasi terminologi klinis (LOINC, SNOMED, ICD) ke dalam struktur FHIR R4.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <section class="bg-white rounded-xl shadow-lg p-6 border border-slate-200">
+                        
+                        <div id="tab-search" class="tab-content active">
+                            <h3 class="text-lg font-bold mb-2">Search and Map Legacy Data</h3>
+                            <p class="text-xs text-gray-500 mb-4">Cari istilah klinis atau kode untuk melihat pemetaan resource FHIR.</p>
+                            
+                            <div class="flex gap-2 mb-6">
+                                <input type="text" id="searchInput" class="flex-1 p-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none" placeholder="Cari: Asthma, E11.9, 8310-5...">
+                                <button onclick="searchAndMap()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Cari</button>
+                            </div>
+
+                            <div class="overflow-x-auto border rounded-lg max-h-[400px] custom-scroll">
+                                <table id="mappingTable" class="w-full text-sm">
+                                    <thead class="sticky top-0 bg-white shadow-sm">
+                                        <tr>
+                                            <th>Input/Term</th>
+                                            <th>FHIR Resource</th>
+                                            <th>Code</th>
+                                            <th>Source</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="mappingResultBody">
+                                        <tr><td colspan="4" class="text-center text-gray-400 py-10">Gunakan kolom pencarian di atas...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="tab-patient" class="tab-content">
+                            <h3 class="text-lg font-bold mb-4">Patient Resource</h3>
+                            <div class="space-y-4">
+                                <input type="text" id="p-id" class="w-full p-2 border rounded" placeholder="ID Pasien (MRN)">
+                                <input type="text" id="p-name" class="w-full p-2 border rounded" placeholder="Nama Lengkap Pasien">
+                                <select id="p-gender" class="w-full p-2 border rounded">
+                                    <option value="male">Laki-laki</option>
+                                    <option value="female">Perempuan</option>
+                                </select>
+                                <input type="date" id="p_dob" class="w-full p-2 border rounded">
+                                <textarea id="p_resume" class="w-full p-2 border rounded h-32" placeholder="Ringkasan klinis..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div id="tab-obs" class="tab-content">
+                            <h3 class="text-lg font-bold mb-4 text-orange-600">Observations (LOINC)</h3>
+                            <div id="obs-list" class="space-y-2 max-h-96 overflow-y-auto p-2"></div>
+                        </div>
+
+                        <div id="tab-snomed" class="tab-content">
+                            <h3 class="text-lg font-bold mb-4 text-green-600">Conditions (SNOMED CT)</h3>
+                            <div id="snomed-list" class="space-y-2 max-h-96 overflow-y-auto p-2"></div>
+                        </div>
+
+                        <div id="tab-icd" class="tab-content">
+                            <h3 class="text-lg font-bold mb-4 text-red-600">Diagnosis (ICD-10)</h3>
+                            <div id="icd-list" class="space-y-2 max-h-96 overflow-y-auto p-2"></div>
+                        </div>
+
+                        <button onclick="processMapping()" class="mt-8 w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:shadow-2xl transition transform active:scale-95 flex items-center justify-center">
+                            <i class="fas fa-sync-alt mr-2"></i> GENERATE FHIR BUNDLE
+                        </button>
+                    </section>
+
+                    <section class="flex flex-col h-full">
+                        <div class="bg-slate-900 rounded-xl shadow-2xl flex-1 flex flex-col overflow-hidden border-4 border-slate-800">
+                            <div class="bg-slate-800 p-3 flex justify-between items-center text-slate-400 text-xs font-mono">
+                                <span>OUTPUT: JSON_BUNDLE</span>
+                                <span class="bg-green-900 text-green-400 px-2 py-1 rounded">VALIDATED</span>
+                            </div>
+                            <pre id="output-json" class="p-6 text-green-400 font-mono text-xs overflow-auto flex-1 custom-scroll">
+// Masukkan data lalu klik Generate...
+                            </pre>
+                        </div>
+                        <footer class="mt-4 text-[10px] text-gray-500 italic text-center">
+                            Standardized via JMIR Journal Framework (2024). Supporting Semantic Interoperability.
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- 1. LOGIN & NAVIGATION ---
+        function login() {
+            const u = document.getElementById('user').value;
+            const p = document.getElementById('pass').value;
+            if(u === 'user' && p === '321') {
+                document.getElementById('login-page').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                generateInputs();
+            } else { alert('Akses Ditolak!'); }
+        }
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function generateInputs() {
+            const createFields = (containerId, cssClass, placeholder) => {
+                const container = document.getElementById(containerId);
+                container.innerHTML = '';
+                for(let i=1; i<=10; i++) {
+                    container.innerHTML += `<input type="text" class="${cssClass} w-full p-2 mb-2 border rounded text-sm shadow-sm" placeholder="${placeholder} ${i}">`;
+                }
+            };
+            createFields('obs-list', 'in-obs', 'LOINC Code');
+            createFields('snomed-list', 'in-snomed', 'SNOMED CT Code');
+            createFields('icd-list', 'in-icd', 'ICD-10 Code');
+        }
+
+        // --- 2. SEARCH & MAP LOGIC (Legacy Data) ---
+        const sampleMappings = [
+            // OBSERVATIONS (LOINC)
+            { input: '8310-5', resource: 'Observation', code: '8310-5', desc: 'Body temperature', source: 'LOINC' },
+            { input: '8480-6', resource: 'Observation', code: '8480-6', desc: 'Systolic blood pressure', source: 'LOINC' },
+            { input: '8462-4', resource: 'Observation', code: '8462-4', desc: 'Diastolic blood pressure', source: 'LOINC' },
+            { input: '2339-0', resource: 'Observation', code: '2339-0', desc: 'Glucose [Blood]', source: 'LOINC' },
+            { input: '6690-2', resource: 'Observation', code: '6690-2', desc: 'Leukocytes count', source: 'LOINC' },
+            { input: '718-7', resource: 'Observation', code: '718-7', desc: 'Hemoglobin', source: 'LOINC' },
+            { input: '4548-4', resource: 'Observation', code: '4548-4', desc: 'HbA1c', source: 'LOINC' },
+            { input: '39156-5', resource: 'Observation', code: '39156-5', desc: 'BMI', source: 'LOINC' },
+            { input: '29463-7', resource: 'Observation', code: '29463-7', desc: 'Body weight', source: 'LOINC' },
+            { input: '8302-2', resource: 'Observation', code: '8302-2', desc: 'Body height', source: 'LOINC' },
+            { input: '8867-4', resource: 'Observation', code: '8867-4', desc: 'Heart rate', source: 'LOINC' },
+            { input: '9279-1', resource: 'Observation', code: '9279-1', desc: 'Respiratory rate', source: 'LOINC' },
+            { input: '2093-3', resource: 'Observation', code: '2093-3', desc: 'Cholesterol Serum', source: 'LOINC' },
+
+            // SNOMED CT
+            { input: '73211009', resource: 'Condition', code: '73211009', desc: 'Diabetes mellitus', source: 'SNOMED CT' },
+            { input: '38341003', resource: 'Condition', code: '38341003', desc: 'Hypertensive disorder', source: 'SNOMED CT' },
+            { input: '195967001', resource: 'Condition', code: '195967001', desc: 'Asthma', source: 'SNOMED CT' },
+            { input: '22298006', resource: 'Condition', code: '22298006', desc: 'Myocardial infarction', source: 'SNOMED CT' },
+            { input: '254637007', resource: 'Condition', code: '254637007', desc: 'Breast cancer', source: 'SNOMED CT' },
+            { input: '414545008', resource: 'Condition', code: '414545008', desc: 'Ischemic heart disease', source: 'SNOMED CT' },
+            { input: '19829001', resource: 'Condition', code: '19829001', desc: 'Disorder of lung', source: 'SNOMED CT' },
+            { input: '44054006', resource: 'Condition', code: '44054006', desc: 'Type 2 diabetes', source: 'SNOMED CT' },
+            { input: '370143000', resource: 'Condition', code: '370143000', desc: 'Major depressive disorder', source: 'SNOMED CT' },
+            { input: '40917007', resource: 'Condition', code: '40917007', desc: 'Chronic kidney disease', source: 'SNOMED CT' },
+
+            // ICD-10
+            { input: 'E11.9', resource: 'Condition', code: 'E11.9', desc: 'T2DM without complications', source: 'ICD-10' },
+            { input: 'I10', resource: 'Condition', code: 'I10', desc: 'Essential hypertension', source: 'ICD-10' },
+            { input: 'J45.9', resource: 'Condition', code: 'J45.9', desc: 'Asthma, unspecified', source: 'ICD-10' },
+            { input: 'I21.9', resource: 'Condition', code: 'I21.9', desc: 'Acute MI, unspecified', source: 'ICD-10' },
+            { input: 'C50.9', resource: 'Condition', code: 'C50.9', desc: 'Malignant neoplasm breast', source: 'ICD-10' },
+            { input: 'N18.9', resource: 'Condition', code: 'N18.9', desc: 'CKD, unspecified', source: 'ICD-10' },
+            { input: 'K21.9', resource: 'Condition', code: 'K21.9', desc: 'GERD', source: 'ICD-10' },
+            { input: 'U07.1', resource: 'Condition', code: 'U07.1', desc: 'COVID-19 confirmed', source: 'ICD-10' },
+            { input: 'E66.9', resource: 'Condition', code: 'E66.9', desc: 'Obesity, unspecified', source: 'ICD-10' },
+            { input: 'M54.5', resource: 'Condition', code: 'M54.5', desc: 'Low back pain', source: 'ICD-10' },
+        ];
+
+        function searchAndMap() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const tableBody = document.getElementById('mappingResultBody');
+            tableBody.innerHTML = ''; 
+
+            const filtered = sampleMappings.filter(m => 
+                m.input.toLowerCase().includes(input) || 
+                m.code.toLowerCase().includes(input) || 
+                m.desc.toLowerCase().includes(input)
+            );
+
+            if (filtered.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="4" class="text-center py-10 text-red-500">Tidak ada data yang cocok.</td></tr>';
+                return;
+            }
+
+            filtered.forEach(m => {
+                tableBody.innerHTML += `
+                    <tr class="hover:bg-indigo-50 transition cursor-pointer">
+                        <td class="font-medium">${m.input}</td>
+                        <td><span class="bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase">${m.resource}</span></td>
+                        <td class="font-mono text-xs">${m.code}</td>
+                        <td><span class="text-[10px] border border-slate-300 px-1 rounded text-slate-500">${m.source}</span></td>
+                    </tr>
+                `;
+            });
+        }
+
+        // --- 3. MAPPING ENGINE ---
+        function processMapping() {
+            const patientName = document.getElementById('p-name').value || "Unknown";
+            const patientId = document.getElementById('p-id').value || "000";
+
+            let bundle = {
+                resourceType: "Bundle",
+                type: "collection",
+                timestamp: new Date().toISOString(),
+                entry: []
+            };
+
+            // Entry Patient
+            bundle.entry.push({
+                resource: {
+                    resourceType: "Patient",
+                    id: patientId,
+                    name: [{ text: patientName }],
+                    gender: document.getElementById('p-gender').value,
+                    birthDate: document.getElementById('p_dob').value || "1900-01-01"
+                }
+            });
+
+            // Observations
+            document.querySelectorAll('.in-obs').forEach(el => {
+                if(el.value) {
+                    bundle.entry.push({
+                        resource: {
+                            resourceType: "Observation",
+                            status: "final",
+                            code: { coding: [{ system: "http://loinc.org", code: el.value }] },
+                            subject: { reference: "Patient/" + patientId }
+                        }
+                    });
+                }
+            });
+
+            // Conditions
+            const mapCondition = (selector, system) => {
+                document.querySelectorAll(selector).forEach(el => {
+                    if(el.value) {
+                        bundle.entry.push({
+                            resource: {
+                                resourceType: "Condition",
+                                code: { coding: [{ system: system, code: el.value }] },
+                                subject: { reference: "Patient/" + patientId }
+                            }
+                        });
+                    }
+                });
+            };
+
+            mapCondition('.in-snomed', 'http://snomed.info/sct');
+            mapCondition('.in-icd', 'http://hl7.org/fhir/sid/icd-10');
+
+            document.getElementById('output-json').innerText = JSON.stringify(bundle, null, 4);
+        }
+    </script>
+</body>
+</html>
